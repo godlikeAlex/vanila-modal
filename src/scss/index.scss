@@ -1,0 +1,51 @@
+.y-modal {}
+
+.y-modal.open .y-modal-overlay,
+.y-modal.open .y-modal-content {
+  z-index: 999;
+  opacity: 1;
+}
+
+.y-modal.hide .y-modal-overlay,
+.y-modal.hide .y-modal-content {
+  z-index: 999;
+  opacity: 1;
+}
+
+.y-modal.open .y-modal-content {
+  transform: translateY(50px);
+} 
+
+.y-modal-overlay, .y-modal-content {
+  opacity: 0;
+  z-index: -1;
+}
+
+.y-modal.hide .y-modal-content {
+  transform: translateY(-150%);
+}
+
+.y-modal.hide .y-modal-overlay {
+  opacity: 0;
+}
+
+.y-modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(0, 0%, 20%, 0.63);
+  transition: .2s ;
+}
+
+.y-modal-content {
+  width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  margin: auto;
+  transform: translateY(-150%);
+  transition: transform .3s ease-in;
+}
